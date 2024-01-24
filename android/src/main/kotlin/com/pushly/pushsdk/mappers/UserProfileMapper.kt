@@ -10,7 +10,7 @@ fun UserProfile.toMap() = HashMap<String, Any?>().apply {
             "isDeleted" to isDeleted,
             "isEligibleToPrompt" to isEligibleToPrompt,
             "isSubscribed" to isSubscribed,
-            "subscriberStatus" to subscriberStatus.name,
+            "subscriberStatus" to subscriberStatus?.name,
             "token" to token
         )
     )

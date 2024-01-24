@@ -2,7 +2,7 @@ import Flutter
 import UIKit
 import Pushly
 
-internal let MODULE_VERSION = "1.0.0"
+internal let MODULE_VERSION = "1.1.0"
 internal let PNLogs = PNLogger(name: "PushSDK SWBridge")
 
 public class SwiftPushlyPlugin: NSObject, FlutterPlugin {

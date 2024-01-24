@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:pushly_pushsdk/pushsdk.dart';
-import 'package:pushly_pushsdk/src/models.dart';
 
 class UserProfileImpl {
 
@@ -46,24 +45,28 @@ class UserProfileImpl {
     return get().then((value) => value.externalId);
   }
 
-  Future<String> getAnonymousId() {
+  Future<String?> getAnonymousId() {
     return get().then((value) => value.anonymousId);
   }
 
-  Future<bool> isDeleted() {
+  Future<bool?> isDeleted() {
     return get().then((value) => value.isDeleted);
   }
 
-  Future<bool> isEligibleToPrompt() {
+  Future<bool?> isEligibleToPrompt() {
     return get().then((value) => value.isEligibleToPrompt);
   }
 
-  Future<bool> isSubscribed() {
+  Future<bool?> isSubscribed() {
     return get().then((value) => value.isSubscribed);
   }
 
-  Future<PNSubscriberStatus> subscriberStatus() {
+  Future<PNSubscriberStatus?> subscriberStatus() {
     return get().then((value) => value.subscriberStatus);
+  }
+
+  Future<String?> getToken() {
+    return get().then((value) => value.token);
   }
 
   Future<void> _handleMethod(MethodCall call) async {

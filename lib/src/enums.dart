@@ -304,4 +304,3 @@ enum PNNotificationClickType {
     }, orElse:() => PNNotificationClickType.defaultAction);
   } 
 }
-

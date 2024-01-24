@@ -29,9 +29,6 @@ migrate_working_dir/
 .packages
 build/
 
-# Created by https://www.toptal.com/developers/gitignore/api/flutter,xcode,android,androidstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=flutter,xcode,android,androidstudio
-
 ### Android ###
 # Gradle files
 .gradle/
@@ -275,7 +272,4 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/flutter,xcode,android,androidstudio
-
-pubspec.lock
-Podfile.lock
+*.lock

@@ -1,11 +1,12 @@
 group 'com.pushly.pushsdk'
 
-def moduleVersion = '1.0.0'
+def moduleVersion = '1.1.0'
 version moduleVersion
 
 buildscript {
     ext.kotlin_version = '1.6.10'
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
     }
@@ -19,6 +20,7 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
     }
@@ -52,6 +54,6 @@ android {
     }
 
     dependencies {
-        implementation "com.pushly.android:pushsdk:[1.0,2.0["
+        implementation "com.pushly.android:pushsdk:[1.1,1.2["
     }
 }

@@ -334,12 +334,12 @@ class PNECommItem extends JsonObject {
 }
 
 class UserProfile {
-  late String anonymousId;
+  String? anonymousId;
   String? externalId;
-  late bool isDeleted;
-  late bool isEligibleToPrompt;
-  late bool isSubscribed;
-  late PNSubscriberStatus subscriberStatus;
+  bool? isDeleted;
+  bool? isEligibleToPrompt;
+  bool? isSubscribed;
+  PNSubscriberStatus? subscriberStatus;
   String? token;
 
   UserProfile(Map<String, dynamic> input) {
@@ -349,7 +349,7 @@ class UserProfile {
       isDeleted = input['isDeleted'];
       isEligibleToPrompt = input['isEligibleToPrompt'];
       isSubscribed = input['isSubscribed'];
-      subscriberStatus = PNSubscriberStatus.fromValue(input['subscriberStatus']);
+      subscriberStatus = input['subscriberStatus'] != null ? PNSubscriberStatus.fromValue(input['subscriberStatus']) : null;
       token = input['token'];
     } catch (e) {
       dt.log("Error processing UserProfile ${e.toString()}");

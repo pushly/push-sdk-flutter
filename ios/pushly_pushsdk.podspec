@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage         = pubspec['homepage']
   s.license          = { :file => '../LICENSE', :type => 'MIT' }
   s.author           = { 'Pushly' => 'support@pushly.com' }
-  s.source           = { :git => "https://github.com/pushly/push-sdk-flutter", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/pushly/pushly-sdk-flutter", :tag => s.version.to_s }
   s.source_files     = 'Classes/**/*'
   s.platform         = :ios, '11.0'
 
@@ -23,5 +23,5 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
 
   s.dependency 'Flutter'
-  s.dependency "Pushly", '>= 1.0.0', '< 2.0.0'
+  s.dependency "Pushly", '>= 1.2.0', '< 1.3.0'
 end
